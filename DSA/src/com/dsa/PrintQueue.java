@@ -11,6 +11,7 @@ public class PrintQueue {
 		obj.enqueue(40);
 		obj.enqueue(50);
 		obj.dequeue();
+		obj.dequeue();
 		
 		obj.display();
 

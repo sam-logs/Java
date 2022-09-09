@@ -16,6 +16,7 @@ public class PrintStack {
 		stack.push(30);
 		stack.push(20);
 		stack.pop();
+		stack.pop();
 
 		stack.display();
 
