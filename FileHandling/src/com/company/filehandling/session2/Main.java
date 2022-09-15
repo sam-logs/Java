@@ -12,7 +12,7 @@ public class Main {
 		try {
 			System.out.println("Enter number of items: ");
 			int n = sc.nextInt();
-			for(int i=0; i<n; i++) {
+			for(int i = 0; i < n; i++) {
 				System.out.println("Enter player name: ");
 				String playerName = sc.next();
 				System.out.println("Enter team name: ");
@@ -21,12 +21,15 @@ public class Main {
 				int matchesPlayed = sc.nextInt();
 
 				PlayerDetails obj = new PlayerDetails(playerName, teamName, matchesPlayed);
-				
+				try {
 				FileOutputStream fout = new FileOutputStream("C:\\Users\\Saumya.Prabhakar\\Documents\\Folder\\output.csv");
 				ObjectOutputStream out=new ObjectOutputStream(fout);
 				out.writeObject(obj);
 				out.close();
-				
+				}catch(Exception e) {
+					System.out.println(e);
+				}
+
 
 			}
 			System.out.println("Success");
