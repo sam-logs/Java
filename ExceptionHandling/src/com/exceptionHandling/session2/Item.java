@@ -40,22 +40,22 @@ public class Item {
 
 	public static void addItems() {
 		try {
-			ArrayList<Item> obj = new ArrayList<Item>();
+			ArrayList<Item> itemList = new ArrayList<Item>();
 
 			Item item1 = new Item(101, "fruit", 200);
 			Item item2 = new Item(102, "Drink", 100);
 			Item item3 = new Item(103, "Dairy", 400);
 			Item item4 = new Item(104, "Clothes", 2000);
 
-			obj.add(item1);
-			obj.add(item2);
-			obj.add(item3);
-			obj.add(item4);
-			if (obj.isEmpty()) {
+			itemList.add(item1);
+			itemList.add(item2);
+			itemList.add(item3);
+			itemList.add(item4);
+			if (itemList.isEmpty()) {
 
 				throw new CartEmptyException("Cart is Empty");
 			} else {
-				for (Item var : obj) {
+				for (Item var : itemList) {
 					System.out.println(var.itemId + " " + var.name + " " + var.price);
 				}
 			}
