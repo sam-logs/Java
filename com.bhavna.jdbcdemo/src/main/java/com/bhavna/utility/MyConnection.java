@@ -2,6 +2,7 @@ package com.bhavna.utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class MyConnection {
 	public static Connection getConnection() {
@@ -15,7 +16,15 @@ public class MyConnection {
 
 		} catch (Exception e) {
 			System.out.println(e);
+		} finally {
+			try {
+				if (connection != null)
+					connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
+
 		return connection;
 	}
 
