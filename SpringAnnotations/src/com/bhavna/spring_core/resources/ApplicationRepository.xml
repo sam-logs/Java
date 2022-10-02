@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<context:component-scan
+		base-package="com.bhavana.springcore.bean" />
+		<bean id="StudentObj" class="com.bhavna.springcore.bean.Student">
+		<property name="name">
+			<value>Ram</value>
+		</property>
+		<property name="rollNo">
+			<value>31</value>
+		</property>
+		<property name="marks">
+			<value>50</value>
+		</property>
+		</bean>
+		
+		<bean id="StudentObj1" class="com.bhavna.springcore.bean.Student">
+		<property name="name">
+			<value>Jam</value>
+		</property>
+		<property name="rollNo">
+			<value>33</value>
+		</property>
+		<property name="marks">
+			<value>40</value>
+		</property>
+		</bean>
+		
+	<bean id="StudentRepoObj" class="com.bhavna.springcore.dao.StudentRepo">
+		<property name="repo">
+			<map>
+				<entry key="181903" value-ref="StudentObj"></entry>
+				<entry key="181904" value-ref="StudentObj1"></entry>
+
+			</map>
+		</property>
+	</bean>
+
+</beans>
