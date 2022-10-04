@@ -14,6 +14,7 @@ public class TestSpringExpression {
 		
 		Department dept = (Department) context.getBean("deptWorker");
 		System.out.println(dept);
+		((ClassPathXmlApplicationContext)context).close();
 	}
 
 }

@@ -14,7 +14,7 @@ public class Department {
 	private Student student;
 	private List<String> workers = new ArrayList<>();
 	private Map<String, Integer> salaryByWorkers = new HashMap<>();
-	
+
 	public Department() {
 		workers.add("John");
 		workers.add("jack");
@@ -26,13 +26,13 @@ public class Department {
 		salaryByWorkers.put("Alex", 12000);
 		salaryByWorkers.put("George", 14000);
 	}
-	
-	@Value("#{deptWorker.workers[0]}") 
+
+	@Value("#{deptWorker.workers[0]}")
 	private String name;
-	
-	@Value("#{deptWorker.salaryByWorkers['John']}") 
+
+	@Value("#{deptWorker.salaryByWorkers['John']}")
 	private Integer salary;
-	
+
 	public Department(int deptId, Student student, List<String> workers, Map<String, Integer> salaryByWorkers,
 			String name, Integer salary) {
 		super();
@@ -59,9 +59,6 @@ public class Department {
 	public void setSalaryByWorkers(Map<String, Integer> salaryByWorkers) {
 		this.salaryByWorkers = salaryByWorkers;
 	}
-
-
-
 
 	public int getDeptId() {
 		return deptId;
@@ -91,8 +88,5 @@ public class Department {
 		return "Department [deptId=" + deptId + ", student=" + student + ", workers=" + workers + ", salaryByWorkers="
 				+ salaryByWorkers + ", name=" + name + ", salary=" + salary + "]";
 	}
-
-
-	
 
 }

@@ -14,6 +14,7 @@ public class TestSpringCoreRepository {
 
 		StudentRepo student = (StudentRepo) context.getBean("StudentRepoObj");
 		System.out.println(student);
+		((ClassPathXmlApplicationContext)context).close();
 
 	}
 

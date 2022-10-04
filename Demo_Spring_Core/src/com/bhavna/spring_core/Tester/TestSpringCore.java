@@ -13,9 +13,9 @@ public class TestSpringCore {
 				"com/bhavna/spring_core/resources/Application.xml");
 		Student student = (Student) context.getBean("StudentObj");
 		System.out.println(student);
-		System.out.println("List" + student.getSchool());
-		System.out.println("Set" + student.getStandard());
-		System.out.println("Map" + student.getUid());
+		System.out.println("List: " + student.getSchool());
+		System.out.println("Set: " + student.getStandard());
+		System.out.println("Map: " + student.getUid());
 
 		((ClassPathXmlApplicationContext) context).close();
 
